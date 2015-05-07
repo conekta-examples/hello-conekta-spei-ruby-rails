@@ -9,11 +9,9 @@ class CheckoutsController < ApplicationController
         currency: "MXN",
         description: "Pizza Delivery at test",
         reference_id: "001-id-test",
-        details:
-        {
-          email: params['emailBuyer']
-        },
-        card: params['conektaTokenId']
+        cash: {
+          type: 'oxxo'
+        }
       })
     rescue Conekta::ValidationError => e
       puts e.message_to_purchaser

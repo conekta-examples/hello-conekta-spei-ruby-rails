@@ -1,3 +1,5 @@
 <h1> Check Charge Status</h1>
-<h3><%="El cargo por #{@charge.amount/100} pesos, tiene un status #{@charge.status}" %></h3>
+<h3><%="El cargo por #{@charge.amount/100} pesos en OXXO, tiene un status #{@charge.status}" %></h3>
 <p><%= @charge.inspect %></p>
+<img src="<%= @charge.payment_method.barcode_url %>"></img>
+<p ><%=@charge.payment_method.barcode%></p>
