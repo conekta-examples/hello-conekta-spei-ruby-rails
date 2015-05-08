@@ -10,8 +10,8 @@ class CheckoutsController < ApplicationController
         currency: "MXN",
         description: "Pizza Delivery at test",
         reference_id: "001-id-test",
-        cash: {
-          type: 'oxxo'
+        bank: {
+          type: 'spei'
         }
       })
     rescue Conekta::ValidationError => e
